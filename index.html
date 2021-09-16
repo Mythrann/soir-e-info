@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soirée Info</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        const socket = io();
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="inputline" class="line"><em>hacker@machine</em>:<b>~/soireeInfo</b>$ <input id="input" type="text" value=""
+            size="100" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" />
+    </div>
+
+    <script src="script.js"></script>
+    <div id="challenge">
+        <h3>challenge n°1</h3>
+        <p>faire afficher "hello world" dans le terminal (hint: la commande echo devrait faire l'affaire)</p>
+    </div>
+</body>
+
+</html>
