@@ -39,6 +39,19 @@ input.addEventListener('keyup', (e) => {
     }
 });
 
+input.addEventListener('change', () => {
+    let divToAdd = document.createElement('div');
+    divToAdd.classList = 'line';
+    divToAdd.innerHTML = "<em>hacker@machine</em>:<b>" + endpoint + "</b>$ " + input.value;
+    socket.emit('try', input.value.trim());
+    console.log('Command sent via socket.');
+    input.value = "";
+    document.body.appendChild(divToAdd);
+    document.body.appendChild(inputLine);
+
+    input.focus();
+});
+
 socket.on('endpoint', ep => {
     endpoint = ep;
     console.log("Endpoint changed to " + ep);
